@@ -17,12 +17,13 @@ body {
 }
 header{
     width: 100px;
-    height: 100vh;
+    height: 100%;
     background-color: var(--bg-color);
     transition: 0.3s ease;
     position: fixed;
     padding-top: 10px;
     z-index: 111;
+
 }
 .m1.active{
     background-color: var(--text-color);
@@ -187,6 +188,7 @@ header.open .logo {
 .nav-links-div {
     display: flex;
     gap: 5px;
+    position: relative;
 }
 
 header.open .m2:hover .tooltip {
@@ -249,206 +251,28 @@ header.open .m2:hover .tooltip {
     display: none;
 }
 
-.header.open .div1:hover .tooltip {
+.header.open .nav-links-div:hover .tooltip {
     display: none;
 }
 
-.div1:hover .tooltip {
+.nav-links-div:hover .tooltip {
     display: flex;
 }
 
-.header.open .div2:hover .tooltip2 {
-    display: none;
-}
-
-.div2:hover .tooltip2 {
-    display: flex;
-}
-
-.header.open .div3:hover .tooltip3 {
-    display: none;
-}
-
-.div3:hover .tooltip3 {
-    display: flex;
-}
-
-.header.open .div4:hover .tooltip4 {
-    display: none;
-}
-
-.div4:hover .tooltip4 {
-    display: flex;
-}
-
-.header.open .div5:hover .tooltip5 {
-    display: none;
-}
-
-.div5:hover .tooltip5 {
-    display: flex;
-}
-
-.header.open .div6:hover .tooltip6 {
-    display: none;
-}
-
-.div6:hover .tooltip6 {
-    display: flex;
-}
-
-.header.open .div7:hover .tooltip7 {
-    display: none;
-}
-
-.div7:hover .tooltip7 {
-    display: flex;
-}
-.header.open .div8:hover .tooltip8 {
-    display: none;
-}
-
-.div8:hover .tooltip8{
-    display: flex;
-}
-
-.header.open .div9:hover .tooltip9{
-    display: none;
-}
-
-.div9:hover .tooltip9{
-    display: flex;
-}
-.header.open .div10:hover .tooltip10{
-    display: none;
-}
-
-.div10:hover .tooltip10 {
-    display: flex;
-}
-.header.open .div11:hover .tooltip11{
-    display: none;
-}
-
-.div11:hover .tooltip11 {
-    display: flex;
-}
 .tooltip {
     display: none;
     font-size: 16px;
     background-color: var(--text-color);
     color: var(--bg-color);
     position: absolute;
-    left: 100px;
-    top: 190px;
+    left: 140%;
+    top: 5px;
     padding: 10px;
     border: 2px solid var(--hover-color);
     border-radius: 10px;
+    width: max-content;
 }
 
-.tooltip2 {
-    display: none;
-    font-size: 16px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    position: absolute;
-    left: 100px;
-    top: 260px;
-    padding: 10px 20px;
-    border: 2px solid var(--hover-color);
-    border-radius: 10px;
-}
-
-.tooltip3 {
-    display: none;
-    font-size: 16px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    position: absolute;
-    left: 100px;
-    top: 330px;
-    padding: 10px 20px;
-    border: 2px solid var(--hover-color);
-    border-radius: 10px;
-}
-
-.tooltip4 {
-    display: none;
-    font-size: 16px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    position: absolute;
-    left: 100px;
-    top: 400px;
-    padding: 10px 20px;
-    border: 2px solid var(--hover-color);
-    border-radius: 10px;
-}
-
-.tooltip5 {
-    display: none;
-    font-size: 16px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    position: absolute;
-    left: 100px;
-    top: 460px;
-    padding: 10px 30px;
-    border: 2px solid var(--hover-color);
-    border-radius: 10px;
-}
-
-.tooltip6 {
-    display: none;
-    font-size: 16px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    position: absolute;
-    left: 100px;
-    top: 540px;
-    padding: 10px 20px;
-    border: 2px solid var(--hover-color);
-    border-radius: 10px;
-}
-
-.tooltip7 {
-    display: none;
-    font-size: 16px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    position: absolute;
-    left: 100px;
-    top: 610px;
-    padding: 10px 20px;
-    border: 2px solid var(--hover-color);
-    border-radius: 10px;
-}
-
-.tooltip8 {
-    display: none;
-    font-size: 16px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    position: absolute;
-    left: 100px;
-    top: 680px;
-    padding: 10px 20px;
-    border: 2px solid var(--hover-color);
-    border-radius: 10px;
-}
-
-.tooltip9 {
-    display: none;
-    font-size: 16px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    position: absolute;
-    left: 100px;
-    top: 730px;
-    padding: 10px 20px;
-    border: 2px solid var(--hover-color);
-    border-radius: 10px;
-}
 .header.open .logout-div {
     width: 250px;
     background-color: #1D1B30;
@@ -462,7 +286,7 @@ header.open .m2:hover .tooltip {
 .header-bottom-logo-div{
     background-color: #1D1B30;
     width:auto;
-    height: inherit;
+    height: 91px;
     margin-top: 45px;
     padding: 10px 10px;
 }
