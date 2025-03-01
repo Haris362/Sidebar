@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #ffff;
+    --hover-color: rgb(4, 52, 124);
+    --bg-color: #11101d;
+}
+
+body {
+    background-color: rgb(93, 112, 139);
+    font-family: 'roboto';
+
+}
+header{
+    width: 100px;
+    height: 100vh;
+    background-color: var(--bg-color);
+    transition: 0.3s ease;
+    position: fixed;
+    padding-top: 10px;
+    z-index: 111;
+}
+.m1.active{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+.logo-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    padding-left: 10px;
+    
+}
+
+.header.open .logo-div {
+    padding-left: 10px;
+}
+
+.logo-div {
+    padding-left: 0px;
+
+}
+
+.logo {
+    display: none;
+    font-weight: 400;
+}
+
+#logo-icon {
+    font-size: 35px;
+    color:  rgba(46, 119, 214, 0.534);
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    height:70%;
+    gap: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.nav-bar div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    width: 60px;
+    height: 50px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.nav-bar div:hover {
+    background-color: var(--text-color);
+    transition: 0.3s all ease;
+}
+
+.nav-bar div:hover .m1 {
+    color: var(--bg-color);
+    transition: 0.3s all ease;
+}
+
+.nav-bar div:hover i {
+    color: var(--bg-color);
+    transition: 0.3s all ease;
+}
+
+header.open .nav-links-div {
+    width: 190px;
+}
+
+.nav-bar i {
+    text-decoration: none !important;
+    color: var(--text-color);
+    font-size: 25px;
+
+}
+
+.m1 {
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none !important;
+    color: var(--text-color);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 5px;
+}
+
+header.open .m1 {
+    visibility: visible;
+    transition: 0.3s all ease;
+}
+
+.m1 {
+    visibility: hidden;
+}
+
+header.open {
+    width: 250px;
+}
+
+header.open .logo {
+    display: flex;
+}
+
+.header.open .menu-btn {
+    padding: 0px;
+    padding-top: 13px;
+    width: 0px;
+    color: var(--text-color);
+}
+
+.header.open .logo-div {
+    flex-direction: row;
+}
+
+.header.open .menu-btn {
+    padding-bottom: 15px;
+}
+
+.header.open #logo-icon {
+    display: flex;
+}
+
+.menu-btn {
+    color: var(--text-color);
+    cursor: pointer;
+    margin-top: 6px;
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.bx bx-menu {
+    font-size: 30px;
+}
+
+.menu-btn:hover {
+    /* transition: 0.2s; */
+    border-radius: 25%;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.m1:hover .m2 {
+    color: var(--hover-color);
+}
+
+.m2 a i:hover .m1 {
+    visibility: visible;
+}
+
+.nav-links-div {
+    display: flex;
+    gap: 5px;
+}
+
+header.open .m2:hover .tooltip {
+    display: none;
+}
+
+.m2:hover {
+    visibility: visible;
+}
+
+#logo-icon {
+    display: none;
+}
+
+.header.open .input-div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background-color: #1D1B30;
+    transition: 0.4s all ease;
+}
+
+.input-div {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1D1B30;
+    margin-left: 15px;
+    margin-top: 30px;
+
+}
+
+.header.open .input-div i {
+    padding-left: 10px;
+}
+
+.header.open .search-box {
+    display: flex;
+    width: 150px;
+}
+
+.input-div i {
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.search-box {
+    height: 40px;
+    color: var(--text-color);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    display: none;
+}
+
+.header.open .div1:hover .tooltip {
+    display: none;
+}
+
+.div1:hover .tooltip {
+    display: flex;
+}
+
+.header.open .div2:hover .tooltip2 {
+    display: none;
+}
+
+.div2:hover .tooltip2 {
+    display: flex;
+}
+
+.header.open .div3:hover .tooltip3 {
+    display: none;
+}
+
+.div3:hover .tooltip3 {
+    display: flex;
+}
+
+.header.open .div4:hover .tooltip4 {
+    display: none;
+}
+
+.div4:hover .tooltip4 {
+    display: flex;
+}
+
+.header.open .div5:hover .tooltip5 {
+    display: none;
+}
+
+.div5:hover .tooltip5 {
+    display: flex;
+}
+
+.header.open .div6:hover .tooltip6 {
+    display: none;
+}
+
+.div6:hover .tooltip6 {
+    display: flex;
+}
+
+.header.open .div7:hover .tooltip7 {
+    display: none;
+}
+
+.div7:hover .tooltip7 {
+    display: flex;
+}
+.header.open .div8:hover .tooltip8 {
+    display: none;
+}
+
+.div8:hover .tooltip8{
+    display: flex;
+}
+
+.header.open .div9:hover .tooltip9{
+    display: none;
+}
+
+.div9:hover .tooltip9{
+    display: flex;
+}
+.header.open .div10:hover .tooltip10{
+    display: none;
+}
+
+.div10:hover .tooltip10 {
+    display: flex;
+}
+.header.open .div11:hover .tooltip11{
+    display: none;
+}
+
+.div11:hover .tooltip11 {
+    display: flex;
+}
+.tooltip {
+    display: none;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: absolute;
+    left: 100px;
+    top: 190px;
+    padding: 10px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+}
+
+.tooltip2 {
+    display: none;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: absolute;
+    left: 100px;
+    top: 260px;
+    padding: 10px 20px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+}
+
+.tooltip3 {
+    display: none;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: absolute;
+    left: 100px;
+    top: 330px;
+    padding: 10px 20px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+}
+
+.tooltip4 {
+    display: none;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: absolute;
+    left: 100px;
+    top: 400px;
+    padding: 10px 20px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+}
+
+.tooltip5 {
+    display: none;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: absolute;
+    left: 100px;
+    top: 460px;
+    padding: 10px 30px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+}
+
+.tooltip6 {
+    display: none;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: absolute;
+    left: 100px;
+    top: 540px;
+    padding: 10px 20px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+}
+
+.tooltip7 {
+    display: none;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: absolute;
+    left: 100px;
+    top: 610px;
+    padding: 10px 20px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+}
+
+.tooltip8 {
+    display: none;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: absolute;
+    left: 100px;
+    top: 680px;
+    padding: 10px 20px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+}
+
+.tooltip9 {
+    display: none;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: absolute;
+    left: 100px;
+    top: 730px;
+    padding: 10px 20px;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+}
+.header.open .logout-div {
+    width: 250px;
+    background-color: #1D1B30;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    padding-left: 10px;
+    animation: opacity 1.5s;
+}
+.header-bottom-logo-div{
+    background-color: #1D1B30;
+    width:auto;
+    height: inherit;
+    margin-top: 45px;
+    padding: 10px 10px;
+}
+
+.img-text-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.headings-div{
+    display: none;
+}
+.person-img{
+    width:75px;
+    height:75px;
+    border-radius: 15px;
+    display: none;
+}
+#logout-logo{
+    font-size: 25px;
+    display: flex;
+    padding: 20px;
+}
+.header.open .headings-div{
+    display: flex;
+    flex-direction: column;
+}
+.header.open .person-img{
+    display: flex;
+}
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media (max-height:750px) {
+    .nav-bar{
+        gap: 10px;
+    }
+}
+@media (max-height:670px) {
+    .nav-bar{
+        padding-top: 0px;
+    }
+    .input-div{
+        margin-top: 20px;
+    }
+}

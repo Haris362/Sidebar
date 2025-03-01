@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Side Navbar</title>
+</head>
+
+<body>
+    <header class="header" id="sidebar">
+        <div class="logo-div">
+            <i class="bx bx-atom" id="logo-icon" onclick="toggleSidebar()"></i>
+            <h2 class="logo" > Science Lab</h2>
+            <div class="menu-btn" onclick="toggleSidebar()"><i class="bx bx-menu"></i></div>
+        </div>
+        <div class="input-div"><i class="bx bx-search"></i><input type="search" class="search-box" placeholder="Search">
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-links-div div1">
+                <a href="#" class="m2">
+                    <i class="bx bxs-dashboard"></i>
+                    <span class="tooltip">Dashboard</span>
+                </a>
+                <a href="#dash" class="m1">Dashboard</a>
+            </div>
+            <div class="nav-links-div div2">
+                <a href="#" class="m2"><i class="bx bx-user"></i>
+                    <span class="tooltip2">User</span></a>
+                    <a href="#user" class="m1">User</a>
+                </div>
+            <div class="nav-links-div div3">
+                <a href="#" class="m2"><i class="bx bx-chat"></i>
+                    <span class="tooltip3">Message</span></a>
+                    <a href="#" class="m1">Message</a>
+                </div>
+            <div class="nav-links-div div4">
+                <a href="#" class="m2"><i class="bx bx-pie-chart-alt-2"></i>
+                    <span class="tooltip4">Analytics</span></a>
+                    <a href="#" class="m1">Analytics</a>
+                </div>
+            <div class="nav-links-div div5">
+                <a href="#" class="m2"><i class="bx bx-folder"></i>
+                    <span class="tooltip5">File Manager</span></a>
+                    <a href="#" class="m1">File Manager</a>
+                </div>
+            <div class="nav-links-div div6">
+                <a href="#" class="m2"><i class="bx bx-cart-alt"></i>
+                    <span class="tooltip6">Order</span></a>
+                    <a href="#" class="m1">Order</a>
+                </div>
+            <div class="nav-links-div div7">
+                <a href="#" class="m2"><i class='bx bx-history' ></i></i>
+                    <span class="tooltip7">History</span></a>
+                    <a href="#" class="m1">History</a>
+                </div>
+            <div class="nav-links-div div8">
+                <a href="#" class="m2"><i class="bx bx-cog"></i>
+                    <span class="tooltip8">Settings</span></a>
+                    <a href="#" class="m1">Settings</a>
+                </div>
+        </nav>
+        <div class="header-bottom-logo-div">
+            <div class="img-text-div">
+                <img src="./DSC_6919.JPG" alt="" class="person-img">
+                <div class="headings-div">
+                <h2 class="bottom-heading">M.Haris</h2>
+                    <h5 class="bottom-header-text">Web Designer</h5>
+                </div>
+                <i class='bx bx-log-out' id="logout-logo" onclick="toggleSidebar()"></i>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("header nav a");
+
+        function changeActive() {
+            let index = sections.length;
+
+            while (--index && window.scrollY + 30 < sections[index].offsetTop) { }
+
+            navLinks.forEach(link => link.classList.remove("active"));
+            navLinks[index].classList.add("active");
+        }
+
+        changeActive(); // Set initial active link
+        window.addEventListener("scroll", changeActive);
+    </script>
+
+
+</body>
+
+</html>

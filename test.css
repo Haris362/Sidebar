@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+}
+
+.nav-links-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.div1 {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.m2 {
+    display: flex;
+    align-items: center;
+}
+
+.m2 i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.tooltip {
+    margin-left: 5px;
+    display: none;
+}
+
+.m2:hover .tooltip {
+    display: inline;
+}
+
+.m1 {
+    margin-left: 10px;
+}
